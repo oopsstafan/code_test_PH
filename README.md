@@ -1,46 +1,30 @@
-# Getting Started with Create React App
+# 1. Introduction
+This is a web for the code test. The home page has a header, and a menu with 5 options including 'Home' and 'Login'.
+When users are at home page, they will see my introduction like a CV in a table at the same page.
+When users are at each of the 'Hire me' page, users will go to another new 'info page.
+When users are at login page, they can input username and password to login in the same page. If login successful, user will
+also go to the 'info' page. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+P.S. You need to input username 'admin' and password 'admin' to login, every other inputs will fail the login.
 
-## Available Scripts
+# 2. Bonus Question
+## For the config file
+For the bonus question about reusable menu, I created a seperate config file and define an array with all the
+required api values like 'key', 'title', and 'path' into objects. When I need to reuse a menu I can simply read all the values here. And when I need to change menu, the only thing I need to do is also edit this file.
 
-In the project directory, you can run:
+If there is nested menus like with child menu, I will created a 'children' property in object and generate
+required valued for child menu. It depends on what UI libraries I am using with different values needed
 
-### `yarn start`
+You can find the specific way to create navi in my 'Navi' component
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## For the createNavi function in Navi component
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+'createNavi' function is used to create reusable menu. For simple menu like this web, just simply map the array generated
+in the config file, and create dom with required value generated in config file.
 
-### `yarn test`
+If there is nested menu with submenu, for antd Menu, I need to also have 'Submenu' as parent node and 'Menu.Item' as child
+in this case, for the reason that I have already had children property in config file, simply make a if statement. if having
+child, return 'Submenu' first then do 'createNavi' again to generate child node 'Menu.Item' which is same with the normal
+un-submenu.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Thanks for the opportunity!
