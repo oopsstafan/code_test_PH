@@ -5,7 +5,7 @@ When users are at each of the 'Hire me' page, users will go to another new 'info
 When users are at login page, they can input username and password to login in the same page. If login successful, user will
 also go to the 'info' page. 
 
-P.S. You need to input username 'admin' and password 'admin' to login, every other inputs will fail the login.
+<b>P.S. You need to input username 'admin' and password 'admin' to login, every other inputs will fail the login.</b>
 
 # 2. Bonus Question
 ## For the config file
