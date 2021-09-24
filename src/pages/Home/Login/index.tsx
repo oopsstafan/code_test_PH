@@ -1,6 +1,7 @@
 import { Card, Form, Input, Button, message } from 'antd'
 //import withRouter to get props.history so that I can call push/goBack/etc to change page
 import { withRouter, RouteComponentProps } from 'react-router-dom'
+import {store} from '../../../mobx/user_Info_Store'
 
 
 function Login({history}: RouteComponentProps): JSX.Element {
@@ -10,6 +11,10 @@ function Login({history}: RouteComponentProps): JSX.Element {
         //if the username and password are both 'admin', then go to '/info' path
         if (value.username === 'admin' && value.password === 'admin'){
             message.success('Login Successful!')
+            //save username to mobax store
+            store.saveUserInfo(value.username)
+            //save username to localStorage
+            localStorage.setItem('username', value.username)
             history.push('/info')
         }else{
             message.error('Login Failed!')
@@ -20,7 +25,7 @@ function Login({history}: RouteComponentProps): JSX.Element {
         history.goBack()
     }
     return (
-        <Card title="Login page">
+        <Card >
             <Form
                 name="basic"
                 labelCol={{ span: 8 }}

@@ -15,19 +15,19 @@ export const naviConfig = [
         path: '/home'
     },
     {
-        key: 'info1',
-        title: 'Hire me!',
-        path: '/info'
+        key: 'hireme1',
+        title: 'Hire Me! Reason #1',
+        path: '/home/hireme1'
     },
     {
-        key: 'info2',
-        title: 'Hire me!',
-        path: '/info'
+        key: 'hireme2',
+        title: 'Hire Me! Reason #2',
+        path: '/home/hireme2'
     },
     {
-        key: 'info3',
-        title: 'Hire me!',
-        path: '/info'
+        key: 'hireme3',
+        title: 'Hire Me! Reason #3',
+        path: '/home/hireme3'
     },
     {
         key: 'login',

@@ -3,7 +3,7 @@ import { Card, Descriptions, Badge } from 'antd'
 
 export default function Desc(): JSX.Element {
     return (
-        <Card title="Home Page">
+        <Card >
             <Descriptions title="Yifan's Info" bordered>
                 <Descriptions.Item label="Name">Yifan(Ivan) Xu</Descriptions.Item>
                 <Descriptions.Item label="Education">Monash University</Descriptions.Item>
