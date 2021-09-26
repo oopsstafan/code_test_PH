@@ -1,9 +1,9 @@
 # 1. Introduction
-This is a web for the code test. The home page has a header, and a menu with 5 options including 'Home' and 'Login'.
+This is a web for the code test. The home page has a header, and a menu with 5 options including 'Home', 'Login', and 3 'Hire me Reason #' page.
 When users are at home page, they will see my introduction like a CV in a table at the same page.
-When users are at each of the 'Hire me' page, users will go to another new 'info page.
+When users are at each of the 'Hire me reason #' page, users can check out some basic information.
 When users are at login page, they can input username and password to login in the same page. If login successful, user will
-also go to the 'info' page. 
+go to the new page with user's username. 
 
 <b>P.S. You need to input username 'admin' and password 'admin' to login, every other inputs will fail the login.</b>
 
@@ -26,5 +26,14 @@ If there is nested menu with submenu, for antd Menu, I need to also have 'Submen
 in this case, for the reason that I have already had children property in config file, simply make a if statement. if having
 child, return 'Submenu' first then do 'createNavi' again to generate child node 'Menu.Item' which is same with the normal
 un-submenu.
+
+# 3. Libraries used
+- 'react-router-dom' for pages route
+- 'antd' from pages UI design
+- 'mobx' for manage state and pass data between components
+- '@testing-library/react', 'enzyme' and '@wojtekmaj/enzyme-adapter-react-17' for unit test
+
+<b>There maybe some bugs when using test libraries to test components created by antd</b>
+
 
 # Thanks for the opportunity!

@@ -1,7 +1,7 @@
 import { Card, Descriptions, Badge } from 'antd'
 
 
-export default function Desc(): JSX.Element {
+export default function Desc() {
     return (
         <Card >
             <Descriptions title="Yifan's Info" bordered>
