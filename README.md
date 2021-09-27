@@ -33,7 +33,7 @@ un-submenu.
 - 'mobx' for manage state and pass data between components
 - '@testing-library/react', 'enzyme' and '@wojtekmaj/enzyme-adapter-react-17' for unit test
 
-<b>There maybe some bugs when using test libraries to test components created by antd</b>
+<b>There maybe some bugs when using test libraries to test components created by antd. I made some research and figured out antd did not support the test library I'm using</b>
 
 
 # Thanks for the opportunity!
